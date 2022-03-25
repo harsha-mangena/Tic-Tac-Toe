@@ -44,7 +44,7 @@ public class TictactoeApplication {
 				position = scan.nextInt();
 			}
 			player.add(position);
-			play.setPieceforPlayer(board, position);
+			play.setPiece(board, position, 1);
 			play.Display(board);
 			//Checking if Player is winner
 			result = play.isWinner(player, computer);
@@ -61,7 +61,7 @@ public class TictactoeApplication {
 				cPosition = rand.nextInt(9)+1;
 			}
 			computer.add(cPosition);
-			play.setPieceforComputer(board, cPosition);
+			play.setPiece(board, cPosition, 0);
 			play.Display(board);
 			//Checking if Computer is winner
 			result = play.isWinner(player, computer);

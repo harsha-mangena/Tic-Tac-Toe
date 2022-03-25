@@ -24,54 +24,35 @@ public class Tictactoe  implements ITicTacToe{
     }
 
     @Override
-    public void setPieceforPlayer(char[][] board, int position) {
-        // TODO Auto-generated method stub
-        switch(position)
+    public void setPiece(char[][] board, int position, int player) {
+        char piece = ' ';
+        if (player == 1)
         {
-            case 1: board[0][0] = 'X';
-                    break;
-            case 2: board[0][2] = 'X';
-                    break;
-            case 3: board[0][4] = 'X';
-                    break;
-            case 4: board[2][0] = 'X';
-                    break;
-            case 5: board[2][2] = 'X';
-                    break;
-            case 6: board[2][4] = 'X';
-                    break;
-            case 7: board[4][0] = 'X';
-                    break;
-            case 8: board[4][2] = 'X';
-                    break;
-            case 9: board[4][4] = 'X';
-                break;
-                    
+                piece = 'X';
         }
-        
-    }
-
-    @Override
-    public void setPieceforComputer(char[][] board, int position) {
+        else if(player == 0)
+        {
+                piece = 'O';
+        }
         switch(position)
         {
-            case 1: board[0][0] = 'O';
+            case 1: board[0][0] = piece;
                     break;
-            case 2: board[0][2] = 'O';
+            case 2: board[0][2] = piece;
                     break;
-            case 3: board[0][4] = 'O';
+            case 3: board[0][4] = piece;
                     break;
-            case 4: board[2][0] = 'O';
+            case 4: board[2][0] = piece;
                     break;
-            case 5: board[2][2] = 'O';
+            case 5: board[2][2] = piece;
                     break;
-            case 6: board[2][4] = 'O';
+            case 6: board[2][4] = piece;
                     break;
-            case 7: board[4][0] = 'O';
+            case 7: board[4][0] = piece;
                     break;
-            case 8: board[4][2] = 'O';
+            case 8: board[4][2] = piece;
                     break;
-            case 9: board[4][4] = 'O';
+            case 9: board[4][4] = piece;
                 break;
                     
         }
