@@ -1,5 +1,6 @@
 package com.projects.tictactoe;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -54,7 +55,7 @@ public class TictactoeApplication {
 				break;
 			}
 			//Positon by Computer, will be using random Int to generate the position
-			Random rand = new Random();
+			Random rand = new SecureRandom();
 			int cPosition = rand.nextInt(9)+1;
 			while(player.contains(cPosition) || computer.contains(cPosition))
 			{
